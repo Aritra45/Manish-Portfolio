@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aria Vale — Actor Portfolio</title>
+  <meta name="description" content="Aria Vale — showreel, gallery and contact. Professional actor portfolio." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@500;700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" href="images/favicon.png" />
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+</head>
+
+<body class="theme-dark">
+  <!-- <a class="skip-link" href="#main">Skip to main content</a> -->
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <img src="images/pro.jpg" alt="Aria Vale logo" class="logo" />
+        <span class="brand-name">Aria Vale</span>
+      </div>
+
+      <!-- Desktop links -->
+      <ul class="nav-links" role="menubar">
+        <li><a href="#about">About</a></li>
+        <li><a href="#showreel">Showreel</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#press">Press</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" aria-label="Toggle light and dark mode" class="icon-btn">☾</button>
+        <button id="hamburger" aria-expanded="false" aria-controls="mobile-menu" class="icon-btn">☰</button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="mobile-menu" hidden>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#showreel">Showreel</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#press">Press</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div id="hero-canvas-wrap">
+      <canvas id="hero-canvas"></canvas>
+    </div>
+
+    <div class="hero-inner container" role="banner">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          <span class="eyebrow">Actor • Performer</span>
+          <span id="name">Aria Vale</span>
+        </h1>
+
+        <p class="headline">
+          <span id="typewriter" aria-live="polite"></span>
+        </p>
+
+        <div class="hero-ctas">
+          <a class="btn primary" href="#showreel">Watch Showreel</a>
+          <a class="btn ghost" href="#contact">Book & Contact</a>
+        </div>
+      </div>
+
+      <div class="hero-media" aria-hidden="true">
+        <div class="portrait-frame">
+          <img src="images/pro.jpg" alt="Aria Vale portrait" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+      <svg class="arrow" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ABOUT -->
+    <section id="about" class="section container">
+      <div class="grid about-grid">
+        <div class="about-left">
+          <h2>About</h2>
+          <p class="lead">
+            <span class="highlight">Versatile actor with theatre, film and streaming credits.</span>
+            Specialist in character-driven drama and physical performance — trained at the Royal Conservatoire.
+          </p>
+
+          <ul class="meta">
+            <li><strong>Agent:</strong> <span class="highlight">Orion Talent</span></li>
+            <li><strong>Height:</strong> 5'9" / 175 cm</li>
+            <li><strong>Accent:</strong> <span class="highlight">RP, American Neutral</span></li>
+          </ul>
+
+          <blockquote>“<span class="highlight">A quietly electrifying presence</span> — unforgettable.”</blockquote>
+
+
+          <a class="btn outline" href="resume/Aria-Vale-Resume.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+        </div>
+
+        <div class="about-right">
+          <div class="stats">
+            <div class="stat">
+              <div class="num" data-target="12">0</div>
+              <div class="label">Feature Films</div>
+            </div>
+            <div class="stat">
+              <div class="num" data-target="45">0</div>
+              <div class="label">Theatre Runs</div>
+            </div>
+            <div class="stat">
+              <div class="num" data-target="18">0</div>
+              <div class="label">TV & Streaming</div>
+            </div>
+          </div>
+
+          <div class="quote">
+            <blockquote>“<span class="highlight">A quietly electrifying presence</span> — unforgettable.”</blockquote>
+            <cite>— The Stage</cite>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SHOWREEL -->
+    <section id="showreel" class="section dark-slab">
+      <div class="container">
+        <h2>Showreel & Clips</h2>
+
+        <div class="showreel-grid">
+          <div class="video-card">
+            <div class="video-wrap">
+              <video controls preload="metadata" poster="images/pro.jpg">
+                <source src="videos/showreel.mp4" type="video/mp4">
+                Your browser does not support HTML video.
+              </video>
+            </div>
+            <div class="video-meta">
+              <h3>Official Showreel</h3>
+              <p class="small">Runtime: 2:14 — Directed edit</p>
+            </div>
+          </div>
+
+          <div class="video-card">
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="yt-thumb"
+              aria-label="Play YouTube clip - Scene 1">
+              <img src="images/pro.jpg" alt="YouTube thumbnail Scene 1" loading="lazy">
+              <span class="play">▶</span>
+            </a>
+            <div class="video-meta">
+              <h3>Scene 1 — Indie Drama</h3>
+              <p class="small">Director: J. Smith</p>
+            </div>
+          </div>
+
+
+          <div class="video-card">
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="yt-thumb"
+              aria-label="Play YouTube clip - Scene 1">
+              <img src="images/pro.jpg" alt="YouTube thumbnail Scene 1" loading="lazy">
+              <span class="play">▶</span>
+            </a>
+            <div class="video-meta">
+              <h3>Scene 1 — Indie Drama</h3>
+              <p class="small">Director: J. Smith</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section container">
+      <h2>Gallery</h2>
+      <div class="gallery-marquee">
+        <div class="gallery-track">
+          <!-- Original set -->
+          <figure class="masonry-item"><img src="images/pro.jpg" alt="Film still 1" loading="lazy"></figure>
+          <figure class="masonry-item"><img src="images/pro.jpg" alt="Film still 2" loading="lazy"></figure>
+          <figure class="masonry-item"><img src="images/pro.jpg" alt="Portrait 1" loading="lazy"></figure>
+          <figure class="masonry-item"><img src="images/pro.jpg" alt="Backstage" loading="lazy"></figure>
+          <figure class="masonry-item"><img src="images/pro.jpg" alt="Red carpet" loading="lazy"></figure>
+          <!-- Duplicate set for seamless loop -->
+          <figure class="masonry-item"><img src="images/pro.jpg" alt="Film still 1" loading="lazy"></figure>
+          <figure class="masonry-item"><img src="images/pro.jpg" alt="Film still 2" loading="lazy"></figure>
+          <figure class="masonry-item"><img src="images/pro.jpg" alt="Portrait 1" loading="lazy"></figure>
+          <figure class="masonry-item"><img src="images/pro.jpg" alt="Backstage" loading="lazy"></figure>
+          <figure class="masonry-item"><img src="images/pro.jpg" alt="Red carpet" loading="lazy"></figure>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- PRESS -->
+    <section id="press" class="section dark-slab">
+      <div class="container">
+        <h2>Press & Reviews</h2>
+        <div class="press-grid">
+          <article class="press-card">
+            <h3>“A Breakout Performance”</h3>
+            <p class="small">Theatre Magazine — June 2024</p>
+            <a class="read-link" href="#">Read review →</a>
+          </article>
+
+          <article class="press-card">
+            <h3>“Poetic and Precise”</h3>
+            <p class="small">Film Focus — Apr 2024</p>
+            <a class="read-link" href="#">Read review →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section container">
+      <h2>Contact / Booking</h2>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Representation</h3>
+          <p>Orion Talent</p>
+          <p><a href="mailto:agent@oriontalent.example">agent@oriontalent.example</a></p>
+          <p><a href="tel:+441234567890">+44 1234 567890</a></p>
+        </div>
+
+        <form id="contact-form" class="contact-form contact-card" novalidate>
+          <label><span class="sr-only">Your name</span><input name="name" placeholder="Your name" required></label>
+          <label><span class="sr-only">Your email</span><input name="email" type="email" placeholder="Your email"
+              required></label>
+          <label><span class="sr-only">Message</span><textarea name="message" rows="5" placeholder="Project / message"
+              required></textarea></label>
+          <button class="btn primary" type="submit">Send Message</button>
+          <div id="contact-feedback" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Aria Vale</div>
+      <div class="social">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="YouTube">YT</a>
+        <a href="#" aria-label="X (Twitter)">X</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+
+</html>
