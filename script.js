@@ -84,3 +84,16 @@ const showMoreBtn = document.getElementById("showMoreBtn");
       showMoreBtn.textContent = "Show more";
     }
   });
+
+  const showMoreBtnMusic = document.getElementById("showMoreBtnMusic");
+  const showreelGridMusic = document.querySelector(".showreel-grid-music");
+
+  showMoreBtnMusic.addEventListener("click", () => {
+    showreelGridMusic.classList.toggle("expanded");
+
+    if (showreelGridMusic.classList.contains("expanded")) {
+      showMoreBtnMusic.textContent = "Show less";
+    } else {
+      showMoreBtnMusic.textContent = "Show more";
+    }
+  });
