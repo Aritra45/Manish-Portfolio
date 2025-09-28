@@ -79,10 +79,19 @@ body {
     top: 0;
     left: 0;
     padding: 18px 24px;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.25), transparent);
     position: fixed;
     z-index: 60;
+
+    background: rgba(0, 0, 0, 0.35);
+    /* semi-transparent dark background */
+    backdrop-filter: blur(12px);
+    /* 🔥 blur effect */
+    -webkit-backdrop-filter: blur(12px);
+    /* Safari support */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    /* subtle glass border */
 }
+
 
 .nav-inner {
     display: flex;
