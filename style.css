@@ -4,7 +4,7 @@
 :root {
     --bg: #0f1115;
     --panel: #0b0c0f;
-    --muted: #9aa0a6;
+    --muted: #222626;
     --text: #f4f6f8;
     --accent: #e73b3b;
     --glass: rgba(255, 255, 255, 0.04);
@@ -259,7 +259,7 @@ body {
     font-weight: 600;
     letter-spacing: 1px;
     font-size: 12px;
-    color: var(--muted);
+    color: var(--text);
     margin-bottom: 8px;
 }
 
@@ -310,8 +310,8 @@ body {
 
 .btn.ghost {
     background: transparent;
-    color: var(--text);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: var(--muted);
+    border: 2px solid rgba(8, 7, 7, 0.06);
 }
 
 .btn.outline {
