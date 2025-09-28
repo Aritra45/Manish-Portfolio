@@ -460,6 +460,34 @@ body {
     pointer-events: none;
 }
 
+.showreel-grid .video-card:nth-child(n+5) {
+    display: none;
+    /* hide from 5th onward */
+}
+
+.showreel-grid.expanded .video-card {
+    display: flex;
+    /* show all when expanded */
+}
+
+.show-more-btn {
+    margin: 20px auto 0;
+    display: block;
+    padding: 10px 18px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: var(--accent, #e63946);
+    color: #fff;
+    transition: background 0.3s ease;
+}
+
+.show-more-btn:hover {
+    background: #c82e3a;
+}
+
+
 /* =========================
    Gallery
    ========================= */

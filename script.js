@@ -72,3 +72,15 @@ const observer = new IntersectionObserver((entries) => {
 
 highlights.forEach(el => observer.observe(el));
 
+const showMoreBtn = document.getElementById("showMoreBtn");
+  const showreelGrid = document.querySelector(".showreel-grid");
+
+  showMoreBtn.addEventListener("click", () => {
+    showreelGrid.classList.toggle("expanded");
+
+    if (showreelGrid.classList.contains("expanded")) {
+      showMoreBtn.textContent = "Show less";
+    } else {
+      showMoreBtn.textContent = "Show more";
+    }
+  });
