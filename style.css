@@ -40,6 +40,7 @@ body {
     height: 100%;
     scroll-behavior: smooth;
     margin: 5;
+
 }
 
 body {
@@ -170,6 +171,44 @@ body {
 .mobile-menu.active {
     display: block;
 }
+
+/* Show hamburger only on mobile */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    #hamburger {
+        display: inline-block;
+    }
+
+    .mobile-menu {
+        width: 200px;
+        animation: fadeIn var(--transition);
+    }
+
+    .mobile-menu ul li a {
+        padding: 12px 16px;
+        border-radius: 8px;
+    }
+
+    .mobile-menu ul li a:hover {
+        background: var(--glass);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 /* =========================
    Highlight Text Animation
@@ -456,6 +495,9 @@ body {
 /* =========================
    Contact / Footer
    ========================= */
+
+
+
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -524,6 +566,19 @@ body {
 
 /* Mobile */
 @media (max-width: 640px) {
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        /* stack vertically */
+    }
+
+    .contact-card,
+    .contact-form {
+        width: 100%;
+        /* ensure they stretch full width */
+    }
+
+
     .container {
         padding: 0 16px;
     }

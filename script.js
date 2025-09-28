@@ -6,13 +6,27 @@ themeToggle.addEventListener('click', () => {
 });
 
 // Hamburger menu toggle
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobile-menu');
-hamburger.addEventListener('click', () => {
-  mobileMenu.classList.toggle('active');
-  const expanded = hamburger.getAttribute('aria-expanded') === 'true';
-  hamburger.setAttribute('aria-expanded', String(!expanded));
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("hamburger");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  hamburger.addEventListener("click", () => {
+    const isExpanded = hamburger.getAttribute("aria-expanded") === "true";
+    hamburger.setAttribute("aria-expanded", !isExpanded);
+    mobileMenu.hidden = isExpanded;
+    mobileMenu.classList.toggle("active", !isExpanded);
+  });
+
+  // Close menu when clicking a link
+  document.querySelectorAll("#mobile-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.hidden = true;
+      hamburger.setAttribute("aria-expanded", "false");
+      mobileMenu.classList.remove("active");
+    });
+  });
 });
+
 
 // Year update
 const yearEl = document.getElementById('year');
