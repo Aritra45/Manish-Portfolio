@@ -207,6 +207,7 @@
         <button id="showMoreBtn" class="show-more-btn">Show more</button>
       </div>
 
+
       <div class="container">
         <h2>Music albums</h2>
         <div class="showreel-grid-music">
@@ -220,7 +221,7 @@
             </div>
           </div>
           <div class="video-card"> <a href="https://youtu.be/3wkJc8HzmB0?si=XpwDPoJGwkLsvUK9" target="_blank"
-              class="yt-thumb" aria-label="Play YouTube clip - Scene 1"> <img src="images/thumbnails//music/2.jpg"
+              class="yt-thumb" aria-label="Play YouTube clip - Scene 1"> <img src="images/thumbnails/music/2.jpg"
                 alt="YouTube thumbnail Scene 1" loading="lazy"> <span class="play">▶</span> </a>
             <div class="video-meta">
               <h3>Scene 1 — Indie Drama</h3>
@@ -228,7 +229,7 @@
             </div>
           </div>
           <div class="video-card"> <a href="https://youtu.be/3rVnW4YSQdc?si=4COs_cC-WFACRaYg" target="_blank"
-              class="yt-thumb" aria-label="Play YouTube clip - Scene 1"> <img src="images/thumbnails//music/3.jpg"
+              class="yt-thumb" aria-label="Play YouTube clip - Scene 1"> <img src="images/thumbnails/music/3.jpg"
                 alt="YouTube thumbnail Scene 1" loading="lazy"> <span class="play">▶</span> </a>
             <div class="video-meta">
               <h3>Scene 1 — Indie Drama</h3>
@@ -277,6 +278,56 @@
           </div>
         </div>
         <button id="showMoreBtnMusic" class="show-more-btn-music">Show more</button>
+      </div>
+
+      <div class="container">
+        <h2>Daily soaps-Swaraj for DD national </h2>
+        <div class="showreel-grid-dd">
+
+          <div class="video-card"> <a href="https://youtu.be/m1J2qsggdjk?si=7VwnegVZUD_S516G" target="_blank"
+              class="yt-thumb" aria-label="Play YouTube clip - Scene 1"> <img src="images/thumbnails/dd/1.jpg"
+                alt="YouTube thumbnail Scene 1" loading="lazy"> <span class="play">▶</span> </a>
+            <div class="video-meta">
+              <h3>Scene 1 — Indie Drama</h3>
+              <p class="small">Director: J. Smith</p>
+            </div>
+          </div>
+
+        </div>
+        <button id="showMoreBtnDD" class="show-more-btn-dd">Show more</button>
+      </div>
+
+      <div class="container">
+        <h2>Audition Showcase</h2>
+        <div class="showreel-grid-showcase">
+
+          <div class="video-card"> <a href="https://youtu.be/8JI60yTupsE?si=YuzhfERoAKKfc1aB" target="_blank"
+              class="yt-thumb" aria-label="Play YouTube clip - Scene 1"> <img src="images/thumbnails/audition/1.jpg"
+                alt="YouTube thumbnail Scene 1" loading="lazy"> <span class="play">▶</span> </a>
+            <div class="video-meta">
+              <h3>Scene 1 — Indie Drama</h3>
+              <p class="small">Director: J. Smith</p>
+            </div>
+          </div>
+          <div class="video-card"> <a href="https://youtu.be/5F0e3rHEq3c?si=FX-XswGF88oOp1ot" target="_blank"
+              class="yt-thumb" aria-label="Play YouTube clip - Scene 1"> <img src="images/thumbnails/audition/2.jpg"
+                alt="YouTube thumbnail Scene 1" loading="lazy"> <span class="play">▶</span> </a>
+            <div class="video-meta">
+              <h3>Scene 1 — Indie Drama</h3>
+              <p class="small">Director: J. Smith</p>
+            </div>
+          </div>
+          <div class="video-card"> <a href="https://youtu.be/ke4RgnOkirk?si=kMwAvE_Zvqi3QOd7" target="_blank"
+              class="yt-thumb" aria-label="Play YouTube clip - Scene 1"> <img src="images/thumbnails/audition/3.jpg"
+                alt="YouTube thumbnail Scene 1" loading="lazy"> <span class="play">▶</span> </a>
+            <div class="video-meta">
+              <h3>Scene 1 — Indie Drama</h3>
+              <p class="small">Director: J. Smith</p>
+            </div>
+          </div>
+
+        </div>
+        <button id="showMoreBtnShowcase" class="show-more-btn-showcase">Show more</button>
       </div>
     </section>
 
@@ -386,34 +437,48 @@
       <div class="contact-grid">
         <div class="contact-card">
           <h3>Professional Inquiries</h3>
-          <p>Email: <a href="mailto:yourmail@example.com">yourmail@example.com</a></p>
-          <p>Phone/WhatsApp: <a href="tel:+911234567890">+91 12345 67890</a></p>
+          <p>Email: <a href="mailto:manishtyagi9519@gmail.com">manishtyagi9519@gmail.com</a></p>
+          <!-- <p>Phone/WhatsApp: <a href="tel:+911234567890">+91 12345 67890</a></p> -->
           <p>
-            <a href="#">Instagram</a> | <a href="#">YouTube</a> | <a href="#">IMDb</a>
+            <a href="https://www.instagram.com/manishtyagi003?igsh=MWFsODQ3czV4MXAybg==" target="_blank">
+              <img src="images/icons/insta.png" alt="Instagram" class="social-icon"> Instagram
+            </a>
           </p>
+
         </div>
 
-        <form id="contact-form" class="contact-form contact-card" novalidate>
+        <form id="contact-form" class="contact-form contact-card" action="https://formspree.io/f/meoradgj"
+          method="POST">
+
           <label><span class="sr-only">Your name</span><input name="name" placeholder="Your name" required></label>
           <label><span class="sr-only">Your email</span><input name="email" type="email" placeholder="Your email"
               required></label>
           <label><span class="sr-only">Message</span><textarea name="message" rows="5" placeholder="Project / message"
               required></textarea></label>
-          <button class="btn primary" type="submit">Send Message</button>
+          <button class="btn primary" type="submit" id="sendBtn">
+            <span class="btn-text">Send Message</span>
+            <span class="btn-loader"></span>
+          </button>
           <div id="contact-feedback" role="status" aria-live="polite"></div>
         </form>
+        <div id="thankYouPopup" class="thank-you-popup">Thank you! Your message has been sent.</div>
+
       </div>
     </section>
   </main>
   <br>
   <footer class="footer">
     <div class="container footer-inner">
-      <div>© <span id="year"></span> Manish Tyagi</div>
-      <div class="social">
+      <div>Copyright &copy;
+        <script>document.write(new Date().getFullYear());</script> All rights reserved | This portfolio is made with
+        <i class="icon-heart color-danger" aria-hidden="true"></i> by <a
+          href="https://www.linkedin.com/in/aritra-deb-bb16131a3/" target="_blank">Aritra Deb</a>
+      </div>
+      <!-- <div class="social">
         <a href="#" aria-label="Instagram">IG</a>
         <a href="#" aria-label="YouTube">YT</a>
         <a href="#" aria-label="IMDb">IMDb</a>
-      </div>
+      </div> -->
     </div>
   </footer>
 
