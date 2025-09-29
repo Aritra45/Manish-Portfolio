@@ -45,7 +45,7 @@ body {
 
 body {
     font-family: var(--mono);
-    background: linear-gradient(180deg, var(--bg), rgba(0, 0, 0, 0.02));
+    background: linear-gradient(180deg, var(--bg), rgba(255, 2, 2, 0.9));
     color: var(--text);
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
@@ -275,7 +275,7 @@ body {
 .headline {
     font-size: clamp(16px, 2.2vw, 20px);
     margin: 16px 0;
-    color: var(--muted);
+    color: black;
 }
 
 .portrait-frame {
@@ -319,7 +319,7 @@ body {
 
 .btn.ghost {
     background: transparent;
-    color: var(--muted);
+    color: black;
     border: 2px solid rgba(8, 7, 7, 0.06);
 }
 
