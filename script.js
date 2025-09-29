@@ -97,3 +97,32 @@ const showMoreBtn = document.getElementById("showMoreBtn");
       showMoreBtnMusic.textContent = "Show more";
     }
   });
+
+  const photoItems = document.querySelectorAll(".photo-item");
+
+  const observers = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observers.unobserve(entry.target); // animate once
+      }
+    });
+  }, { threshold: 0.2 });
+
+  photoItems.forEach(item => {
+    observers.observe(item);
+  });
+
+  const showMoreBtnGallery = document.getElementById("showMoreBtnGallery");
+  const showreelGridGallery = document.querySelector(".still-gallery");
+
+  showMoreBtnGallery.addEventListener("click", () => {
+    showreelGridGallery.classList.toggle("expanded");
+
+    if (showreelGridGallery.classList.contains("expanded")) {
+      showMoreBtnGallery.textContent = "Show less";
+    } else {
+      showMoreBtnGallery.textContent = "Show more";
+    }
+  });
+
