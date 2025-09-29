@@ -637,8 +637,13 @@ body {
 
 /* Mobile: stack images */
 @media (max-width: 768px) {
-    .photo-row {
+    /* .photo-row {
         flex-direction: column;
+    } */
+
+    .photo-item {
+        max-width: 200px;
+
     }
 }
 
