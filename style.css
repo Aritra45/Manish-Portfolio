@@ -368,10 +368,17 @@ body {
     list-style: none;
     padding: 0;
     margin: 1em 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 items per row */
+    /* gap: 8px 8px; */
+    /* row gap, column gap */
 }
 
 .stats-list li {
-    margin-bottom: 6px;
+    margin: 0;
+    /* grid already handles spacing */
     font-size: 0.95rem;
 }
 
@@ -914,6 +921,10 @@ a {
 
 /* Mobile */
 @media (max-width: 640px) {
+    .stats-list {
+        text-align: left;
+        grid-template-columns: 1fr;
+    }
 
     .section,
     .about-grid,
