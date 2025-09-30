@@ -125,15 +125,16 @@
           <div class="stats">
             <div class="stat">
               <div class="num" data-target="9">0</div>
+
               <div class="label">Years Experience</div>
             </div>
             <div class="stat">
-              <div class="num" data-target="5">0</div>
+              <div class="num" data-target="8">0<span>+</span></div>
               <div class="label">Music Albums</div>
             </div>
             <div class="stat">
-              <div class="num" data-target="20">0</div>
-              <div class="label">Million+ Views</div>
+              <div class="num" data-target="2">0</div>
+              <div class="label">Crore+ Views</div>
             </div>
             <!-- <div class="stat">
               <div class="num" data-target="20">0</div>
@@ -507,6 +508,28 @@
   </footer>
 
   <script src="script.js" defer></script>
+  <script>
+    const startYear = 2015; // the year you started
+    const currentYear = new Date().getFullYear();
+    const years = currentYear - startYear; // calculate experience
+
+    const num = document.querySelector('.num');
+    num.setAttribute('data-target', years); // update data-target
+
+    // Animate number from 0 to current years
+    let current = 0;
+    const increment = () => {
+      const step = years / 100;
+      current += step;
+      if (current < years) {
+        num.textContent = Math.ceil(current);
+        requestAnimationFrame(increment);
+      } else {
+        num.textContent = years;
+      }
+    };
+    increment();
+  </script>
 </body>
 
 </html>

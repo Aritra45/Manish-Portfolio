@@ -51,13 +51,25 @@ if (typewriterEl) {
 
 // Stats count animation
 const stats = document.querySelectorAll('.stat .num');
+
 stats.forEach(stat => {
   const target = +stat.dataset.target;
   let count = 0;
   const step = target / 200;
-  function update() { count += step; if (count >= target) { stat.textContent = target; } else { stat.textContent = Math.floor(count); requestAnimationFrame(update); } }
+
+  function update() {
+    count += step;
+    if (count >= target) {
+      stat.textContent = target + '+'; // append '+'
+    } else {
+      stat.textContent = Math.floor(count) + '+'; // append '+'
+      requestAnimationFrame(update);
+    }
+  }
+
   update();
 });
+
 
 // Animate highlight when in viewport
 const highlights = document.querySelectorAll('.highlight');
@@ -227,5 +239,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   type();
 });
+
 
 
