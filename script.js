@@ -209,6 +209,23 @@ form.addEventListener("submit", async (e) => {
   }
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const text = document.getElementById("typing-text").textContent.trim();
+  const element = document.getElementById("typing-text");
+  element.textContent = ""; // clear text
 
+  let i = 0;
+  function type() {
+    if (i < text.length) {
+      element.textContent += text.charAt(i);
+      i++;
+      setTimeout(type, 40); // typing speed (ms per char)
+    } else {
+      element.style.borderRight = "none"; // remove cursor after finish
+    }
+  }
+
+  type();
+});
 
 

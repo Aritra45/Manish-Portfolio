@@ -53,6 +53,8 @@ body {
     transition: background var(--transition), color var(--transition);
 }
 
+
+
 /* =========================
    Utility
    ========================= */
@@ -276,6 +278,20 @@ body {
     font-size: clamp(16px, 2.2vw, 20px);
     margin: 16px 0;
     color: black;
+
+    /* keeps line breaks */
+    overflow: hidden;
+    border-right: 2px solid orange;
+    /* blinking cursor */
+    width: fit-content;
+    margin-inline: auto;
+    animation: blink 0.7s steps(1) infinite;
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
 }
 
 .portrait-frame {
@@ -363,6 +379,7 @@ body {
     color: #ff9800;
     /* highlight key terms */
 }
+
 
 .about-grid {
     display: grid;
@@ -897,6 +914,40 @@ a {
 
 /* Mobile */
 @media (max-width: 640px) {
+
+    .section,
+    .about-grid,
+    .contact-card,
+    .contact-form {
+        text-align: center;
+    }
+
+    /* Center hero CTAs (buttons) */
+    .hero-ctas {
+        justify-content: center;
+    }
+
+    /* Center stats blocks */
+    .stats {
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Center footer content */
+    .footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        text-align: center;
+    }
+
+    /* Center gallery/showreel cards */
+    .video-card,
+    .photo-item {
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     .contact-grid {
         grid-template-columns: 1fr;
