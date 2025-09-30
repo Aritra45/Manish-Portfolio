@@ -348,6 +348,22 @@ body {
 }
 
 /* About Grid */
+.stats-list {
+    list-style: none;
+    padding: 0;
+    margin: 1em 0;
+}
+
+.stats-list li {
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
+
+.stats-list strong {
+    color: #ff9800;
+    /* highlight key terms */
+}
+
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 420px;
